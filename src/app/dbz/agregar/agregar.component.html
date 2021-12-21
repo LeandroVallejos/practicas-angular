@@ -1,0 +1,23 @@
+<h3>Agregar</h3>
+<small>{{ nuevo.nombre }}</small>
+<hr />
+
+<form (ngSubmit)="agregar()">
+  <!-- el evento se pasa si o si con $event (cuando en vez de ngSubmit estoy usando submit)-->
+  <!-- con [(ngModel)] capturo y modifico el atributo nombre, definido en el component-->
+  <input
+    type="text"
+    placeholder="nombre pj"
+    name="nombre"
+    [(ngModel)]="nuevo.nombre"
+  />
+  <!--         [value]="nuevo.nombre"
+    (input)="cambiarNombre($event)" -->
+  <input
+    type="number"
+    placeholder="poder"
+    name="poder"
+    [(ngModel)]="nuevo.poder"
+  />
+  <button type="submit">Agregar</button>
+</form>
